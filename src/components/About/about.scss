@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap');
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 60px;
+    color: #fff;
+    .about_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        // border: 1px solid red;
+
+        .about_me {
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+
+            span {
+                color: rgb(145, 94, 255);
+            }
+        }
+
+        .about-img {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .about_img {
+                width: 90%;
+                height: 90%;
+                object-fit: contain;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url(../../assets/img/man-looking-computer-screens_604472-18902.avif);
+                border-radius: 50%;
+                border: 2px solid #0999d2;
+                position: relative;
+            }
+        }
+
+        .about-content {
+            gap: 15px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+            .about_home_card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 48px;
+
+                .about-content-card1 {
+                    width: 248px;
+                    height: 280px;
+                    background-color: rgb(21, 16, 48);
+                    border-radius: 20px;
+                    border-bottom: 2px solid rgba(59, 130, 246, 0.5);
+                    border-top: 1px solid #0999d2;
+                    border-left: 1px solid #d400ff;
+                    border-right: 1px solid #d400ff;
+                    font-size: 20px;
+                    font-weight: 700;
+                    font-family: "Rubik Maze", system-ui;
+                    padding: 50px;
+                    box-shadow: 0px 25px 180px -15px #28188ec4;
+                    transition: 0.5s;
+
+                    &:hover {
+                        border-bottom: 1px solid #d400ff;
+                        border-top: 1px solid #0999d2;
+                        border-left: 1px solid rgba(59, 130, 246, 0.5);
+                        border-right: 1px solid rgba(59, 130, 246, 0.5);
+                    }
+                }
+            }
+        }
+
+        .btn-box.btns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 40px;
+
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                max-width: 150px;
+                height: 40px;
+                border-radius: 8px;
+                background-color: #0999d2;
+                border: none;
+                color: #fff;
+                overflow: hidden;
+                position: relative;
+                margin-top: 30px;
+                z-index: 1;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -20px;
+                    left: -6px;
+                    overflow: hidden;
+                    transform: rotate(16deg);
+                    width: 0;
+                    height: 100px;
+                    background: rgba(0, 0, 0, 0.427);
+                    transition: 1s;
+                    z-index: -1;
+                }
+
+                &:hover::before {
+                    width: 170px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .about {
+        flex-direction: column;
+        gap: 2rem;
+        width: auto;
+        height: auto;
+
+        .about_container {
+            flex-direction: column;
+            gap: 2rem;
+            .about-content {
+                flex-direction: column;
+                gap: 2rem;
+                .about_home_card {
+                    flex-direction: column;
+                    gap: 2rem;
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+
+}

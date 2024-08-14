@@ -1,0 +1,80 @@
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 250px 0;
+    color: #fff;
+    .hero-container{
+        .hero_title{
+            font-size: 50px;
+            font-weight: 700;
+            .span{
+                color: rgb(145 94 255);
+            }
+        }
+        .hero_sec{
+            font-size: 30px;
+            font-weight: 700;
+            color: #0999d2;
+        }
+        .her_desc{
+            font-size: 15px;
+            margin: 20px 0 40px;
+        }
+        max-width: 600px;
+        .btn_card{
+            width: 300px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            button{
+                position: relative;
+              
+                width: 140px;
+                height: 40px;
+                background-color: #0999d2;
+                border: 2px solid #0999d2;
+                border-radius: 8px;
+                font-size: 18px;
+                color: #081b29;
+                font-weight: 600;
+                z-index: 1;                
+                overflow: hidden;
+            }
+            button:nth-child(2):hover{
+                color: #081b29;
+            }
+            button:nth-child(2){
+                background: transparent;
+                color: #0999d2;
+            }
+            button:nth-child(2)::before{
+                background-color: #0999d2;
+            }
+           
+            button::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right:  0;
+                width: 0;
+                height: 100%;
+                transition: 0.5s;
+                background-color: #081b29;
+                z-index: -1;                
+
+            }
+            button:hover::before{
+                width: 100%;
+                position: absolute;
+                left: 0px;
+
+            }
+            button:hover:nth-child(1){
+                color: #0999d2;
+            }
+        }
+    }
+}

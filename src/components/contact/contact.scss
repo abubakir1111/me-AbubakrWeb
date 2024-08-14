@@ -1,0 +1,229 @@
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 250px 0;
+    color: white;
+
+    .contact_box {
+        width: 800px;
+        height: 600px;
+        border: 1px solid #fff;
+        padding: 50px 100px;
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 15px;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 100vh;
+            z-index: -1;
+            transition: 1s;
+            border-bottom-right-radius: 100px;
+            border-top-left-radius: 100px;
+            background-color: #0999d20d;
+            
+            transform: rotate();
+            transition: 0.6s linear cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        &:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+        // .me_contact{
+
+        // }
+        .input_card {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+
+            .input_box1 {
+                width: 100%;
+
+                .inp1 {
+                    width: 100%;
+                    height: 40px;
+                    border-top-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    border: none;
+                    padding: 0 20px;
+                    font-size: 20px;
+                    font-weight: 900;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .input_box2 {
+                width: 100%;
+
+                .inp2 {
+                    width: 100%;
+                    height: 40px;
+                    border-top-right-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    border: none;
+                    padding: 0 20px;
+                    font-size: 20px;
+                    font-weight: 900;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .input_box3 {
+                width: 100%;
+
+                .inp3 {
+                    width: 100%;
+                    height: 40px;
+                    border-top-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    border: none;
+                    padding: 0 20px;
+                    font-size: 20px;
+                    font-weight: 900;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .contact_box_button_card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+
+            button {
+                background: linear-gradient(white, aqua);
+                width: 100%;
+                height: 40px;
+                font-size: 20px;
+                box-shadow: 0 0 10px .1px rgb(234, 0, 255);
+                border-radius: 20px;
+                border: none;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                &:focus {
+                    border: none;
+                }
+                
+                &::before {
+                    content: '';
+                    transition: 1s ;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 40px;
+                    background: linear-gradient(aqua, white);
+                    z-index: -1;
+                }
+                &:hover::before {
+                    color: #fff;                    
+                  
+                    width: 100%;
+                    height: 40px;
+                }
+            }
+
+            // button:hover::before{
+            //     width: 100;
+            // }
+
+        }
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .contact {
+        width: auto;
+        height: auto;
+
+        .contact_box {
+            width: auto;
+            height: auto;
+
+            .input_card {
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                gap: 50px;
+                justify-content: center;
+
+                .input_box1 {
+                    width: auto;
+
+                    .inp1 {
+                        width: auto;
+                        height: auto;
+                        border-top-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        border: none;
+                        font-size: 20px;
+                        font-weight: 900;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .input_box2 {
+                    width: auto;
+
+                    .inp2 {
+                        width: auto;
+                        height: auto;
+                        border-top-right-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        border: none;
+                        padding: 0 20px;
+                        font-size: 20px;
+                        font-weight: 900;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+
+                .input_box3 {
+                    width: auto;
+
+                    .inp3 {
+                        width: auto;
+                        height: auto;
+                        border-top-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        border: none;
+                        padding: 0 20px;
+                        font-size: 20px;
+                        font-weight: 900;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
